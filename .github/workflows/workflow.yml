@@ -6,4 +6,4 @@ on:
 
 jobs:
   image-workflow:
-    uses: kerrys-learning-lab/.github/workflows/docker-image.workflow.yml@main
+    uses: kerrys-learning-lab/.github/.github/workflows/docker-image.workflow.yml@main
