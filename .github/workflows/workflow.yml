@@ -14,6 +14,6 @@ on:
 
 jobs:
   image-workflow:
-    uses: kerrys-learning-lab/.github/workflows/docker-image.workflow.yml@${{ inputs.worflow_ref }}
+    uses: kerrys-learning-lab/.github/workflows/docker-image.workflow.yml@${{inputs.worflow_ref}}
     with:
       workflow_ref: ${{ inputs.workflow_ref }}
