@@ -1,0 +1,19 @@
+name: Docker image workflow
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      workflow_ref:
+        description: |
+          The git ref (branch, tag) of the workflow to be used
+          Defaults to `main`.
+        default: main
+        type: string
+        required: false
+
+jobs:
+  image-workflow:
+    uses: kerrys-learning-lab/.github/workflows/docker-image.workflow.yml@${{ inputs.worflow_ref }}
+    with:
+      workflow_ref: ${{ inputs.workflow_ref }}
