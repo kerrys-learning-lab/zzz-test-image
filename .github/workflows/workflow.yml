@@ -4,12 +4,8 @@ on: [push, workflow_dispatch]
 
 jobs:
   image-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: test
-        run: echo ${{ secrets.KERRYS_LEARNING_LAB_ACTOR }}
-    # uses: kerrys-learning-lab/.github/.github/workflows/docker-image.workflow.yml@initial-development
-    # with:
-    #   actor_name: ${{ secrets.KERRYS_LEARNING_LAB_ACTOR }}
-    #   actor_token: ${{ secrets.KERRYS_LEARNING_LAB_TOKEN }}
-    #   actor_email: ${{ secrets.KERRYS_LEARNING_LAB_EMAIL }}
+    uses: kerrys-learning-lab/.github/.github/workflows/docker-image.workflow.yml@initial-development
+    with:
+      actor_name: ${{ secrets.KERRYS_LEARNING_LAB_ACTOR }}
+      actor_token: ${{ secrets.KERRYS_LEARNING_LAB_TOKEN }}
+      actor_email: ${{ secrets.KERRYS_LEARNING_LAB_EMAIL }}
